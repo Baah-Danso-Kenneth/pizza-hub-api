@@ -11,3 +11,19 @@ class PizzeriaSerializer(serializers.ModelSerializer):
             'city',
             'zip_code',
         ]
+
+class PizzerDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Pizzeria
+        fields = [
+            'id',
+            'pizzeria_name',
+            'city',
+            'state',
+            'zip_code',
+            'phone_number',
+            'description',
+            'logo_image',
+            'email',
+            'active'
+        ]
