@@ -14,6 +14,9 @@ class PizzerialRetrieveAPIView(generics.RetrieveAPIView):
     queryset = Pizzeria.objects.all()
     serializer_class = PizzerDetailSerializer
 
+class PizzeriaDestoyAPIView(generics.DestroyAPIView):
+    lookup_field = "id"
+    queryset = Pizzeria.objects.all()
 
 class PizzeriaCreateAPIView(generics.CreateAPIView):
     queryset = Pizzeria.objects.all()
